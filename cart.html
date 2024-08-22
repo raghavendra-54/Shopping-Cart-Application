@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Shopping Cart</h1>
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total Price: ₹<span id="total-price">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+        <div id="products">
+            <h2>Products</h2>
+            <input type="text" id="search" oninput="filterProducts()" placeholder="Search...">
+            <ul id="product-list">
+                <li>
+                    <img src="C:\Users\Raghavendra\Documents\product1.jpg" alt="Product 1">
+                    BAG - ₹500 <input type="number" id="BAG-quantity" min="1" value="1">
+                    <button onclick="addToCart('BAG', 500, 'BAG-quantity')">Add</button>
+                </li>
+                <li>
+                    <img src="C:\Users\Raghavendra\Documents\product2.jpg" alt="Product 2">
+                    WATCH - ₹1000 <input type="number" id="WATCH-quantity" min="1" value="1">
+                    <button onclick="addToCart('WATCH', 1000, 'WATCH-quantity')">Add</button>
+                </li>
+                <li>
+                    <img src="C:\Users\Raghavendra\Documents\product3.jpg" alt="Product 3">
+                    BRACELET - ₹700 <input type="number" id="BRACELET-quantity" min="1" value="1">
+                    <button onclick="addToCart('BRACELET', 700, 'BRACELET-quantity')">Add</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
